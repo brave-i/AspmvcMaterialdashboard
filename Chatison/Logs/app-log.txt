@@ -1,0 +1,30 @@
+2019-04-12 03:58:06.1181|ERROR|Chatison.Areas.Admin.Controllers.ContactController|Row 2 is empty
+2019-04-12 04:02:33.8253|ERROR|Chatison.Areas.Admin.Controllers.ContactController|Error on row 2 parsing
+2019-04-12 04:02:33.8673|ERROR|Chatison.Areas.Admin.Controllers.ContactController|System.NullReferenceException: Object reference not set to an instance of an object.
+   at Chatison.Areas.Admin.Controllers.ContactController.<Import>d__16.MoveNext() in E:\Projects\Client\Chatison\Chatison\Areas\Admin\Controllers\ContactController.cs:line 282
+2019-04-12 04:05:47.3734|ERROR|Chatison.Areas.Admin.Controllers.ContactController|Error on row 2 parsing
+2019-04-12 04:05:47.4153|ERROR|Chatison.Areas.Admin.Controllers.ContactController|System.NullReferenceException: Object reference not set to an instance of an object.
+   at Chatison.Areas.Admin.Controllers.ContactController.<Import>d__16.MoveNext() in E:\Projects\Client\Chatison\Chatison\Areas\Admin\Controllers\ContactController.cs:line 282
+2019-04-12 04:17:18.0246|ERROR|Chatison.Areas.Admin.Controllers.ContactController|Error on row 2 parsing
+2019-04-12 04:17:18.0656|ERROR|Chatison.Areas.Admin.Controllers.ContactController|System.NullReferenceException: Object reference not set to an instance of an object.
+   at Chatison.Areas.Admin.Controllers.ContactController.<Import>d__16.MoveNext() in E:\Projects\Client\Chatison\Chatison\Areas\Admin\Controllers\ContactController.cs:line 282
+2019-04-12 04:17:18.6032|ERROR|Chatison.Areas.Admin.Controllers.ContactController|Failed to import: {"FirstName":"Anupam","LastName":"Shukla","Email":"anupam@yopmail.com","Phone":"5658244574","GroupIds":[2],"IsOptOut":false,"ProviderId":null,"IsAdmin":false}
+2019-04-12 04:17:18.6032|ERROR|Chatison.Areas.Admin.Controllers.ContactController|System.String[]
+2019-04-12 04:17:18.6682|ERROR|Chatison.Areas.Admin.Controllers.ContactController|Failed to import: {"FirstName":"Anupam","LastName":"Shukla","Email":"anupam@yopmail.com","Phone":"5658244574","GroupIds":[2],"IsOptOut":false,"ProviderId":null,"IsAdmin":false}
+2019-04-12 04:17:18.6732|ERROR|Chatison.Areas.Admin.Controllers.ContactController|System.InvalidOperationException: UserId not found.
+   at Microsoft.AspNet.Identity.UserManager`2.<AddToRoleAsync>d__83.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Chatison.Areas.Admin.Controllers.ContactController.<Import>d__16.MoveNext() in E:\Projects\Client\Chatison\Chatison\Areas\Admin\Controllers\ContactController.cs:line 335
+2019-04-12 04:17:18.6872|ERROR|Chatison.Areas.Admin.Controllers.ContactController|Failed to import: {"FirstName":"Anupam9","LastName":"Shukla","Email":"anupam9@yopmail.com","Phone":"5678545676","GroupIds":[2],"IsOptOut":false,"ProviderId":null,"IsAdmin":false}
+2019-04-12 04:17:18.6872|ERROR|Chatison.Areas.Admin.Controllers.ContactController|System.String[]
+2019-04-12 04:17:18.6872|ERROR|Chatison.Areas.Admin.Controllers.ContactController|Failed to import: {"FirstName":"Anupam9","LastName":"Shukla","Email":"anupam9@yopmail.com","Phone":"5678545676","GroupIds":[2],"IsOptOut":false,"ProviderId":null,"IsAdmin":false}
+2019-04-12 04:17:18.7042|ERROR|Chatison.Areas.Admin.Controllers.ContactController|System.InvalidOperationException: UserId not found.
+   at Microsoft.AspNet.Identity.UserManager`2.<AddToRoleAsync>d__83.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Chatison.Areas.Admin.Controllers.ContactController.<Import>d__16.MoveNext() in E:\Projects\Client\Chatison\Chatison\Areas\Admin\Controllers\ContactController.cs:line 335

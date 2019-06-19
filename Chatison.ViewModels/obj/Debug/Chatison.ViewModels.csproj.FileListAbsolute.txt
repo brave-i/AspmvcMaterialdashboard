@@ -1,0 +1,9 @@
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.ViewModels\bin\Debug\Chatison.ViewModels.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.ViewModels\bin\Debug\Chatison.ViewModels.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.ViewModels\bin\Debug\Chatison.Utilities.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.ViewModels\bin\Debug\Chatison.Utilities.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.ViewModels\obj\Debug\Chatison.ViewModels.csprojAssemblyReference.cache
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.ViewModels\obj\Debug\Chatison.ViewModels.csproj.CoreCompileInputs.cache
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.ViewModels\obj\Debug\Chatison.ViewModels.csproj.CopyComplete
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.ViewModels\obj\Debug\Chatison.ViewModels.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.ViewModels\obj\Debug\Chatison.ViewModels.pdb

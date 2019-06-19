@@ -1,0 +1,9 @@
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Entities\bin\Release\Chatison.Entities.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Entities\bin\Release\Chatison.Entities.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Entities\bin\Release\Chatison.Utilities.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Entities\bin\Release\Chatison.Utilities.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Entities\obj\Release\Chatison.Entities.csprojAssemblyReference.cache
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Entities\obj\Release\Chatison.Entities.csproj.CoreCompileInputs.cache
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Entities\obj\Release\Chatison.Entities.csproj.CopyComplete
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Entities\obj\Release\Chatison.Entities.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Entities\obj\Release\Chatison.Entities.pdb

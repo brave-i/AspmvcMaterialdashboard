@@ -1,0 +1,9 @@
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Dtos\bin\Debug\Chatison.Dtos.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Dtos\bin\Debug\Chatison.Dtos.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Dtos\bin\Debug\Chatison.Utilities.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Dtos\bin\Debug\Chatison.Utilities.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Dtos\obj\Debug\Chatison.Dtos.csprojAssemblyReference.cache
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Dtos\obj\Debug\Chatison.Dtos.csproj.CoreCompileInputs.cache
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Dtos\obj\Debug\Chatison.Dtos.csproj.CopyComplete
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Dtos\obj\Debug\Chatison.Dtos.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Dtos\obj\Debug\Chatison.Dtos.pdb

@@ -1,0 +1,8 @@
+2019-04-10 17:26:41.4897|ERROR|Chatison.Areas.Admin.Controllers.ContactGroupController|System.NullReferenceException: Object reference not set to an instance of an object.
+   at Chatison.Factory.GroupFactory.CreateGroup(Group entity, EditGroupVm model) in E:\Projects\Client\Chatison\Chatison.Factory\GroupFactory.cs:line 21
+   at Chatison.Managers.GroupManager.<EditAsync>d__7.MoveNext() in E:\Projects\Client\Chatison\Chatison.Managers\GroupManager.cs:line 49
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Chatison.Areas.Admin.Controllers.ContactGroupController.<Edit>d__6.MoveNext() in E:\Projects\Client\Chatison\Chatison\Areas\Admin\Controllers\ContactGroupController.cs:line 82

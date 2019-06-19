@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Contact Groups";
+    ViewBag.MenuCssContacts = "kt-menu__item--active active-red";
+}
+
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+    <div class="kt-subheader kt-grid__item" id="kt_subheader">
+        <div class="kt-subheader__main">
+            <h3 class="kt-subheader__title">
+                Contacts
+            </h3>
+            <span class="kt-subheader__separator kt-hidden"></span>
+        </div>
+    </div>
+    <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+        <div class="kt-portlet kt-portlet--mobile">
+            <div class="kt-portlet__head kt-portlet__head--lg m-t-20">
+                <div class="col-md-8">
+                    <div class="pull-left m-t-6 m-r-10">
+                        <span class="action-icon icon-blue p-r-10">
+                            <i class="fa fa-trash-alt m-l-3"></i>
+                        </span>
+                    </div>
+                    <div class="pull-left m-t-6 m-r-10">
+                        <a href="@Url.Action("import","contact", new { area = "admin" })">
+                            <span class="action-icon icon-green">
+                                <i class="fa fa-cloud-download-alt"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="pull-left m-r-10" onclick="contactGroupManageVm.openAddContactDialog()">
+                        <button class="btn btn-primary">
+                            <i class="fa fa-plus"></i> Add Contact
+                        </button>
+                    </div>
+                    <div class="pull-left">
+                        <button class="btn btn-success" onclick="contactGroupManageVm.openAddGroupDialog()">
+                            <i class="fa fa-plus"></i> Add Group
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="kt-input-icon kt-input-icon--right">
+                        <input type="text" class="form-control input-search p-r-50" id="contactGroupSearch">
+                        <span class="kt-input-icon__icon kt-input-icon__icon--right">
+                            <span>
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="kt-portlet__body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-hover table-checkable" id="grid-groups"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_AddGroupModal")
+@Html.Partial("_EditGroupModal")
+
+@Html.Partial("_AddContactModal")
+
+@section scripts
+{
+
+    <script src="~/Areas/Admin/Scripts/App/contact.group.manage.js"></script>
+}
+

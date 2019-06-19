@@ -1,0 +1,130 @@
+﻿@using Chatison.Infrastructure.Managers
+
+@{
+    ViewBag.Title = "Import Contacts";
+    var manager = DependencyResolver.Current.GetService<ISelectListManager>();
+    var mobileProviders = manager.GetMobileProviders();
+}
+
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+    <div class="kt-subheader kt-grid__item" id="kt_subheader">
+        <div class="kt-subheader__main">
+            <h3 class="kt-subheader__title">
+                Import Contacts (1/2)
+            </h3>
+            <span class="kt-subheader__separator kt-hidden"></span>
+        </div>
+    </div>
+    <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+        <div class="kt-portlet kt-portlet--mobile">
+            <div class="kt-portlet__body">
+                @using (Html.BeginForm("mapFields", "contact", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <input type="hidden" name="GroupId" value="@ViewBag.GroupId" />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="file"
+                                       id="uploadedFile"
+                                       name="uploadedFile"
+                                       accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                                       class="d-none"
+                                       onchange="importContactsVm.onFileSelected(event)" />
+                                <button type="button" class="btn btn-outline-primary btn-lg" onclick="importContactsVm.selectFile()">Upload File</button>
+                                <label id="selectedFileName" class="m-l-15"></label>
+                            </div>
+                            <p><strong>Column requirement</strong></p>
+                            <p>You are able to import a CSv, XLS, XLSX file with a list of members</p>
+                            <p>The columns have to be formatted correctly in order for the member to be imported successfully.</p>
+                            <p>Use the following columns first_name, last_name, email and, phone_number.</p>
+                            <p>
+                                You may also include a provider column to specify the mobile provider for each member.
+                                <br />
+                                This option will only work when your account uses the email-to-sms format (FREE plan).<
+                                <br />
+                                Make sure you use the correct name for the provider. Please free to download
+                                <br />
+                                contact list sample CSV file here.
+                            </p>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="importContactsVm.toggleMobileProviders(this)">
+                                    <i class="fa fa-plus-square"></i>
+                                    <i class="fa fa-minus-square d-none"></i>
+                                    See below for a list of available mobile providers
+                                </button>
+                            </div>
+                            @if (mobileProviders != null)
+                            {
+                                <div class="form-group" id="conatiner-mobile-providers" style="display: none;">
+                                    <div class="row">
+                                        @foreach (var item in mobileProviders)
+                                        {
+                                            <div class="col-md-3">
+                                                <p>@item.Name</p>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                            <div class="form-group">
+                                <label><input type="checkbox" id="acceptTerms" onclick="importContactsVm.acceptTerms(this)" /> I agree to Telefio's terms</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12 text-right">
+                                        <a href="@Url.Action("index", "home", new {area = "admin"})" class="btn btn-default m-r-10">Cancel</a>
+                                        <button type="submit" class="btn btn-primary" disabled="disabled">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        var importContactsVm = new function () {
+            const self = this;
+            let showingMobileProviders = false;
+
+            self.toggleMobileProviders = function (sender) {
+                if (showingMobileProviders) {
+                    $(sender).find(".fa-plus-square").removeClass("d-none");
+                    $(sender).find(".fa-minus-square").addClass("d-none");
+                    $("#conatiner-mobile-providers").hide("slow");
+                    showingMobileProviders = false;
+                } else {
+                    $(sender).find(".fa-plus-square").addClass("d-none");
+                    $(sender).find(".fa-minus-square").removeClass("d-none");
+                    $("#conatiner-mobile-providers").show("slow");
+                    showingMobileProviders = true;
+                }
+            }
+
+            self.selectFile = function () {
+                $("#uploadedFile").trigger("click");
+            };
+
+            self.onFileSelected = function (e) {
+                $("#selectedFileName").html(e.target.files[0].name);
+            };
+
+            self.acceptTerms = function (sender) {
+                if ($(sender).prop("checked")) {
+                    $("button[type=submit]").prop("disabled", false);
+                } else {
+                    $("button[type=submit]").prop("disabled", true);
+                }
+            };
+        };
+
+
+        $(document).ready(function () {
+
+        });
+
+    </script>
+}

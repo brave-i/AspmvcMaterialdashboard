@@ -1,0 +1,2 @@
+2019-04-07 23:39:54.3696|INFO|Chatison.Areas.Admin.Controllers.HomeController|Test log
+2019-04-07 23:41:35.9533|INFO|Chatison.Areas.Admin.Controllers.HomeController|Test log

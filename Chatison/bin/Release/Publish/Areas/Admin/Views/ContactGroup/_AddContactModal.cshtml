@@ -1,0 +1,121 @@
+﻿
+@using Chatison.Infrastructure.Managers
+@using Newtonsoft.Json
+@model Chatison.ViewModels.Admin.Contact.AddContactVm
+@{
+    var manager = DependencyResolver.Current.GetService<ISelectListManager>();
+    var groups = JsonConvert.SerializeObject(manager.GetGeoups());
+}
+<input type="hidden" id="hidGroups" value="@groups" />
+<div class="modal fade" id="add-contact-modal" tabindex="-1" role="dialog" aria-labelledby="add-group-title" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        @using (Html.BeginForm("add", "contact", FormMethod.Post, new { @class = "form-horizontal", id = "FrmAddContact" }))
+        {
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="add-group-title">Add Contact</h5>
+                    <button type="button" class="close" aria-label="Close" onclick="contactGroupManageVm.closeAddContactDialog()"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">First Name*</label>
+                                @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control", maxlength = 250 })
+                                <div>
+                                    @Html.ValidationMessageFor(x => x.FirstName)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Last Name</label>
+                                @Html.TextBoxFor(x => x.LastName, new { @class = "form-control", maxlength = 250 })
+                                <div>
+                                    @Html.ValidationMessageFor(x => x.LastName)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Phone*</label>
+                                @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", maxlength = 250, data_type = "phone" })
+                                <div>
+                                    @Html.ValidationMessageFor(x => x.Phone)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group" id="containers-group">
+                                <label class="control-label">Group Select</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12 m-t-25">
+                                        <button type="button" class="btn btn-default btn-sm" onclick="contactGroupManageVm.addContactGroupDropdown('FrmAddContact')">
+                                            <i class="fa fa-plus-circle"></i> Connect to group
+                                        </button>
+                                    </div>
+                                    <div class="col-md-12 m-t-15">
+                                        <button type="button" class="btn btn-default btn-sm" onclick="contactGroupManageVm.removeContactGroupDropdown('FrmAddContact')">
+                                            <i class="fa fa-times-circle"></i> Remove
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Opt-out?</label>
+                                <div class="col-md-12">
+                                    <label>@Html.CheckBoxFor(x => x.IsOptOut) Yes</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Provider (only for FREE plan)</label>
+                                @Html.DropDownListFor(x => x.ProviderId, new SelectList(manager.GetMobileProviders(), "Id", "Name"), "Select Provider", new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Email*</label>
+                                @Html.TextBoxFor(x => x.Email, new { @class = "form-control", maxlength = 250 })
+                                <div>
+                                    @Html.ValidationMessageFor(x => x.Email)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Is Administrator?</label>
+                                <div class="col-md-12">
+                                    <label>@Html.CheckBoxFor(x => x.IsAdmin) Yes</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="contactGroupManageVm.closeAddContactDialog()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Contact</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

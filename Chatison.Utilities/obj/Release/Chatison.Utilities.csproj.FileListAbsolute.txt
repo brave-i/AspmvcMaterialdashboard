@@ -1,0 +1,5 @@
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Utilities\bin\Release\Chatison.Utilities.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Utilities\bin\Release\Chatison.Utilities.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Utilities\obj\Release\Chatison.Utilities.csproj.CoreCompileInputs.cache
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Utilities\obj\Release\Chatison.Utilities.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Utilities\obj\Release\Chatison.Utilities.pdb

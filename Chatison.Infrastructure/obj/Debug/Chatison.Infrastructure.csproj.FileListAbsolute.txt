@@ -1,0 +1,15 @@
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\bin\Debug\Chatison.Infrastructure.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\bin\Debug\Chatison.Infrastructure.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\bin\Debug\Chatison.Dtos.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\bin\Debug\Chatison.Entities.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\bin\Debug\Chatison.Utilities.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\bin\Debug\Chatison.ViewModels.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\bin\Debug\Chatison.Dtos.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\bin\Debug\Chatison.Entities.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\bin\Debug\Chatison.Utilities.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\bin\Debug\Chatison.ViewModels.pdb
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\obj\Debug\Chatison.Infrastructure.csprojAssemblyReference.cache
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\obj\Debug\Chatison.Infrastructure.csproj.CoreCompileInputs.cache
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\obj\Debug\Chatison.Infrastructure.csproj.CopyComplete
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\obj\Debug\Chatison.Infrastructure.dll
+D:\project 2019-0401-0431\asp_project\upgrade_india_version5\Chatison-master\Chatison.Infrastructure\obj\Debug\Chatison.Infrastructure.pdb

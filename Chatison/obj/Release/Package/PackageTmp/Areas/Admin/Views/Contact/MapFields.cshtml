@@ -1,0 +1,89 @@
+﻿@using Chatison.Infrastructure.Managers
+@using Chatison.ViewModels
+@model Chatison.ViewModels.Admin.Contact.ImportContactVm
+@{
+    ViewBag.Title = "Map Fields";
+    var manager = DependencyResolver.Current.GetService<ISelectListManager>();
+    var groups = manager.GetGeoups();
+    var columns = (List<SelectListItemVm>)ViewBag.Columns;
+}
+
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+    <div class="kt-subheader kt-grid__item" id="kt_subheader">
+        <div class="kt-subheader__main">
+            <h3 class="kt-subheader__title">
+                Import Contacts (2/2)
+            </h3>
+            <span class="kt-subheader__separator kt-hidden"></span>
+        </div>
+    </div>
+    <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+        <div class="kt-portlet kt-portlet--mobile">
+            <div class="kt-portlet__body">
+                @using (Html.BeginForm("import", "contact", FormMethod.Post))
+                {
+                    <input type="hidden" name="UploadedFileName" value="@ViewBag.FileName" />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><strong>Please map the fields</strong></p>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label class="control-label">First Name*</label>
+                                @Html.DropDownListFor(x => x.FirstNameColumn, new SelectList(columns, "Key", "Name"), "Select Column", new { @class = "form-control" })
+                                <div>
+                                    @Html.ValidationMessageFor(x => x.FirstNameColumn)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Last Name*</label>
+                                @Html.DropDownListFor(x => x.LastNameColumn, new SelectList(columns, "Key", "Name"), "Select Column", new { @class = "form-control" })
+                                <div>
+                                    @Html.ValidationMessageFor(x => x.LastNameColumn)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Email*</label>
+                                @Html.DropDownListFor(x => x.EmailColumn, new SelectList(columns, "Key", "Name"), "Select Column", new { @class = "form-control" })
+                                <div>
+                                    @Html.ValidationMessageFor(x => x.EmailColumn)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Phone*</label>
+                                @Html.DropDownListFor(x => x.PhoneColumn, new SelectList(columns, "Key", "Name"), "Select Column", new { @class = "form-control" })
+                                <div>
+                                    @Html.ValidationMessageFor(x => x.PhoneColumn)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Provider (only for FREE plan)</label>
+                                @Html.DropDownListFor(x => x.ProviderColumn, new SelectList(columns, "Key", "Name"), "Select Column", new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label class="control-label">Group (default)</label>
+                                @Html.DropDownListFor(x => x.GroupId, new SelectList(groups, "id", "name", ViewBag.GroupId), "Select Group", new { @class = "form-control" })
+                                <div>
+                                    @Html.ValidationMessageFor(x => x.GroupId)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12 text-right">
+                                        <a href="@Url.Action("import", "contact", new {area = "admin"})" class="btn btn-default m-r-10">Back</a>
+                                        <button type="submit" class="btn btn-primary">Import</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                "families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+        const area = '@ViewBag.Area';
+        const baseUrl = '@ViewBag.BaseUrl';
+        var responseMessage = '@(TempData["Response"] ?? ViewBag.Response)';
+    </script>
+
+    <link href="~/Areas/Admin/Content/Styles/datatables.bundle.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/perfect-scrollbar.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/bootstrap.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/animate.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/fontawesome.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/line-awesome.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/flaticon.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/flaticon2.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/alertify.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/style.bundle.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/header/base/light.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/header/menu/light.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/brand/dark.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/aside/dark.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/site.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/Styles/util.css" rel="stylesheet" />
+
+    <title>@ViewBag.Title</title>
+</head>
+<body class="kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+    <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+        <div class="kt-header-mobile__logo">
+            <a href="@Url.Action("index","home",new { Area="admin" })">
+                <img src="~/Areas/Admin/Content/Images/logo-12.png" alt="" />
+            </a>
+        </div>
+        <div class="kt-header-mobile__toolbar">
+            <button class="kt-header-mobile__toggler kt-header-mobile__toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
+            <button class="kt-header-mobile__toggler" id="kt_header_mobile_toggler"><span></span></button>
+            <button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
+        </div>
+    </div>
+
+    <div class="kt-grid kt-grid--hor kt-grid--root">
+        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+            <button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
+            @Html.Partial("_AsideNavsPartial")
+            <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+                @Html.Partial("_HeaderPartial")
+                @RenderBody()
+                @Html.Partial("_FooterPartial")
+            </div>
+        </div>
+    </div>
+    <div id="kt_scrolltop" class="kt-scrolltop">
+        <i class="fa fa-arrow-up"></i>
+    </div>
+    <script>
+        var KTAppOptions = {
+            "colors": {
+                "state": {
+                    "brand": "#5d78ff",
+                    "dark": "#282a3c",
+                    "light": "#ffffff",
+                    "primary": "#5867dd",
+                    "success": "#34bfa3",
+                    "info": "#36a3f7",
+                    "warning": "#ffb822",
+                    "danger": "#fd3995"
+                },
+                "base": {
+                    "label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
+                    "shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
+                }
+            }
+        };
+    </script>
+
+    <script src="~/Areas/Admin/Scripts/jquery.js"></script>
+    <script src="~/Areas/Admin/Scripts/moment.js"></script>
+    <script src="~/Areas/Admin/Scripts/popper.js"></script>
+    <script src="~/Areas/Admin/Scripts/bootstrap.js"></script>
+    <script src="~/Areas/Admin/Scripts/perfect-scrollbar.js"></script>
+    <script src="~/Areas/Admin/Scripts/tooltip.js"></script>
+    <script src="~/Areas/Admin/Scripts/js.cookie.js"></script>
+    <script src="~/Areas/Admin/Scripts/moment.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/sticky.compile.js"></script>
+    <script src="~/Areas/Admin/Scripts/wNumb.js"></script>
+    <script src="~/Areas/Admin/Scripts/jquery.blockUI.js"></script>
+    <script src="~/Areas/Admin/Scripts/scripts.bundle.js"></script>
+    <script src="~/Areas/Admin/Scripts/jquery.query-object.js"></script>
+    <script src="~/Areas/Admin/Scripts/jquery.maskedinput.js"></script>
+    <script src="~/Areas/Admin/Scripts/jquery.numeric.js"></script>
+    <script src="~/Areas/Admin/Scripts/jquery.alertify.js"></script>
+    <script src="~/Areas/Admin/Scripts/datatables.bundle.js"></script>
+    <script src="~/Areas/Admin/Scripts/jquery.form.js"></script>
+    <script src="~/Areas/Admin/Scripts/app.bundle.js"></script>
+    <script src="~/Areas/Admin/Scripts/common.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿
+@model Chatison.ViewModels.Admin.Group.AddGroupVm
+<div class="modal fade" id="add-group-modal" tabindex="-1" role="dialog" aria-labelledby="add-group-title" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        @using (Html.BeginForm("add", "contactGroup", FormMethod.Post, new { id = "FrmAddGroup", onsubmit = "contactGroupManageVm.addGroup(event)" }))
+        {
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="add-group-title">Create New Group</h5>
+                    <button type="button" class="close" aria-label="Close" onclick="contactGroupManageVm.closeAddGroupDialog()"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label">Group Name *</label>
+                        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", maxlength = 250 })
+                        <div>
+                            @Html.ValidationMessageFor(x => x.Name)
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="contactGroupManageVm.closeAddGroupDialog()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Group</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
